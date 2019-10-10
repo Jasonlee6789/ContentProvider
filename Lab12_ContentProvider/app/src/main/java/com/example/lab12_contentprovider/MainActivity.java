@@ -11,26 +11,32 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etContactName;
+    EditText etContactName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etContactName = findViewById(R.id.edt_ContactName);
+        etContactName = findViewById(R.id.contactNameEditText);
     }
 
     public void addName(View view) {
+
+        // Get the name supplied
         String name = etContactName.getText().toString();
 
+        // Stores a key value pair
         ContentValues values = new ContentValues();
-
         values.put(ContactProvider.name, name);
 
+        // Provides access to other applications Content Providers
         Uri uri = getContentResolver().insert(ContactProvider.CONTENT_URL, values);
 
-        Toast.makeText(getBaseContext(),"New Contact Added", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getBaseContext(), "New Contact Added", Toast.LENGTH_LONG)
+                .show();
+
+        //add this line to clear your EditText
         etContactName.setText("");
     }
 }

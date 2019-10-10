@@ -5,26 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="25dp"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/edt_ContactName"
+        android:id="@+id/contactNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_margin="25dp"
-        android:hint="enter contact name"
-        />
+        android:hint="Add contact name" />
 
     <Button
-        android:id="@+id/btn_AddContact"
+        android:id="@+id/addContactButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edt_ContactName"
-        android:layout_margin="25dp"
-        android:background="#44CFC2"
-        android:text="Add Contact"
+        android:text="Add Name"
         android:onClick="addName"
-        />
+        android:layout_below="@+id/contactNameEditText"
+        android:background="#61B4AD"
+        android:layout_alignParentRight="true"
+        android:layout_margin="25dp"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

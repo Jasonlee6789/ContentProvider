@@ -22,10 +22,9 @@
             android:name=".ContactProvider"
             android:exported="true"
             android:multiprocess="true">
-
         </provider>
 
-
     </application>
+
 
 </manifest>
